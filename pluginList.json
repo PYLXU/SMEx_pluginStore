@@ -10,6 +10,11 @@
     "uiName": "听歌识曲",
     "version": "releases"
   },{
+    "id": "lyricsMode",
+    "name": "PYLXU/lyricsMode",
+    "uiName": "[临时]歌词纯享模式",
+    "version": "releases"
+  },{
     "id": "ncm",
     "name": "PYLXU/neteaseSupport",
     "uiName": "NCM扩展（第三方修复）",
