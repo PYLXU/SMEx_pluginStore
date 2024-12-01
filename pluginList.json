@@ -21,12 +21,12 @@
     "version": "releases"
   },{
     "id": "ncm",
-    "name": "PYLXU/SMEx_neteaseSupport",
+    "name": "PYLXU/neteaseSupport",
     "uiName": "NCM扩展（第三方修复）",
     "version": "releases"
   },{
     "id": "neteaseRecommend",
-    "name": "PYLXU/SMEx_neteaseRecommend",
+    "name": "PYLXU/neteaseRecommend",
     "uiName": "NCM扩展 - 音乐推荐模块",
     "version": "releases"
   },{
