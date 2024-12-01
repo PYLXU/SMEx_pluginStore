@@ -1,7 +1,7 @@
 [
   {
     "id": "pluginStore",
-    "name": "PYLXU/pluginStore",
+    "name": "PYLXU/SMEx_pluginStore",
     "uiName": "插件商店",
     "version": "releases"
   },{
@@ -10,18 +10,23 @@
     "uiName": "听歌识曲",
     "version": "releases"
   },{
+    "id": "RisBugFix",
+    "name": "PYLXU/SMEx_RisBugFix",
+    "uiName": "补丁-修复一些小问题[0.0.1:文件名#符号支持]",
+    "version": "releases"
+  },{
     "id": "lyricsMode",
-    "name": "PYLXU/lyricsMode",
-    "uiName": "[临时]歌词纯享模式",
+    "name": "PYLXU/SMEx_lyricsMode",
+    "uiName": "歌词纯享模式",
     "version": "releases"
   },{
     "id": "ncm",
-    "name": "PYLXU/neteaseSupport",
+    "name": "PYLXU/SMEx_neteaseSupport",
     "uiName": "NCM扩展（第三方修复）",
     "version": "releases"
   },{
     "id": "neteaseRecommend",
-    "name": "PYLXU/neteaseRecommend",
+    "name": "PYLXU/SMEx_neteaseRecommend",
     "uiName": "NCM扩展 - 音乐推荐模块",
     "version": "releases"
   },{
