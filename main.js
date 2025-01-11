@@ -5,7 +5,7 @@ const extensionShopPage = ExtensionFunctions.insertNavigationItem({
     text: "商店"
 });
 ExtensionFunctions.insertStyle(`
-    #extensionShopPage .right #extensionShopPage #extensionShopContainer{
+    #extensionShopPage #extensionShopContainer{
         position: absolute;
         z-index: 1;
         padding: 70px 27.5px 100px 27.5px;
@@ -14,7 +14,7 @@ ExtensionFunctions.insertStyle(`
         height: 100%;
         overflow-y: scroll;
     }
-    #extensionShopPage .right #extensionShopPage #extensionShopContainer>div {
+    #extensionShopPage #extensionShopContainer>div {
         background: white;
         width: 100%;
         border-radius: 5px;
@@ -23,14 +23,14 @@ ExtensionFunctions.insertStyle(`
         display: flex;
         align-items: center;
     }
-    #extensionShopPage .right #extensionShopPage #extensionShopContainer>div section {
+    #extensionShopPage #extensionShopContainer>div section {
         width: 100%;
         margin-right: 10px;
     }
-    #extensionShopPage .right #extensionShopPage #extensionShopContainer>div section div {
+    #extensionShopPage #extensionShopContainer>div section div {
         font-size: 1em;
     }
-    #extensionShopPage .right #extensionShopPage #extensionShopContainer>div section span {
+    #extensionShopPage #extensionShopContainer>div section span {
         display: block;
         font-size: .9em;
         opacity: .8;
@@ -38,7 +38,7 @@ ExtensionFunctions.insertStyle(`
         line-height: 1.1em;
         margin-top: 3px;
     }
-    #extensionShopPage .right #extensionShopPage #extensionShopContainer button {
+    #extensionShopPage #extensionShopContainer button {
         white-space: nowrap;
     }
     `);
