@@ -1,7 +1,7 @@
 [
   {
     "id": "notice",
-    "name": "提交插件请前往https://github.com/PYLXU/SMEx_pluginStore/ 提交Pull Request",
+    "name": "<br>提交插件请前往https://github.com/PYLXU/SMEx_pluginStore/ 提交Pull Request",
     "uiName": "插件提交",
     "version": "releases"
   },
