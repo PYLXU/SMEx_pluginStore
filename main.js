@@ -1,7 +1,7 @@
 // 插入侧栏与页面
 const extensionShopPage = ExtensionFunctions.insertNavigationItem({
     pageId: "extensionShopPage",
-    icon: "EE08",
+    icon: "EA44",
     text: "商店"
 });
 ExtensionFunctions.insertStyle(`
@@ -42,6 +42,7 @@ ExtensionFunctions.insertStyle(`
         white-space: nowrap;
     }
     `);
+extensionShopPage.pageDiv.classList.add("page");
 extensionShopPage.pageDiv.innerHTML = `<div class="header">
     <i></i> 扩展商店
 </div>
