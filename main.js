@@ -181,14 +181,19 @@ async function loadStoreData() {
                             <i>&#xEE51;</i> 扩展版本: ${version}<br>
                         </span>
                     </section>
-                    <button class="sub" id="installButton_${packageName}" ${buttonDisabled ? 'disabled' : ''}>${buttonText}</button>
+                    <button class="sub installButton" data-package-name="${packageName}" data-repo-name="${repoName}" data-tag-name="${release.tag_name}" ${buttonDisabled ? 'disabled' : ''}>${buttonText}</button>
                 `;
 
-                document.getElementById(`installButton_${packageName}`).addEventListener('click', function () {
-                    this.setAttribute('disabled', 'true');
-                    downloadAndInstallPlugin(`https://mirror.ghproxy.com/https://github.com/${repoName}/releases/download/${release.tag_name}/extension.zip`, this);
-                });
                 extensionContainer.appendChild(onlinePluginList);
+                onlinePluginList.querySelector(`.installButton`).addEventListener('click', async (event) => {
+                    const button = event.target;
+                    const repoName = button.getAttribute('data-repo-name');
+                    const tagName = button.getAttribute('data-tag-name');
+                    const packageName = button.getAttribute('data-package-name');
+                    button.disabled = true;
+                    button.textContent = '安装中...';
+                    downloadAndInstallPlugin(`https://mirror.ghproxy.com/https://github.com/${repoName}/releases/download/${tagName}/extension.zip`, button);
+                });
 
             } catch (error) {
                 const errorDisplay = document.createElement('div');
