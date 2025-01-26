@@ -1,6 +1,6 @@
 [
   {
-    "id": "notice",
+    "id": "pluginStore",
     "name": "PYLXU/SMEx_pluginStore",
     "uiName": "[通知] 插件提交 (Pull Request方式到PYLXU/SMEx_pluginStore)",
     "version": "releases"
