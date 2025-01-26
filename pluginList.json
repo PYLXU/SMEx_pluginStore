@@ -1,44 +1,49 @@
 [
   {
     "id": "notice",
-    "name": "<br>提交插件请前往https://github.com/PYLXU/SMEx_pluginStore/ 提交Pull Request",
-    "uiName": "插件提交",
+    "name": "PYLXU/SMEx_pluginStore",
+    "uiName": "[通知] 插件提交 (Pull Request方式到PYLXU/SMEx_pluginStore)",
     "version": "releases"
   },
   {
     "id": "pluginStore",
     "name": "PYLXU/SMEx_pluginStore",
-    "uiName": "插件商店",
+    "uiName": "[功能] 插件商店",
     "version": "releases"
   },{
     "id": "recognition",
     "name": "Simsv-Software/SimMusic-Recognition-Ext",
-    "uiName": "听歌识曲",
+    "uiName": "[功能] 听歌识曲",
     "version": "releases"
   },{
     "id": "RisBugFix",
     "name": "PYLXU/SMEx_RisBugFix",
-    "uiName": "补丁-修复一些小问题[0.0.1:文件名#符号支持]",
+    "uiName": "[补丁] 修复文件名#符号的支持",
     "version": "releases"
   },{
     "id": "lyricsMode",
     "name": "PYLXU/SMEx_lyricsMode",
-    "uiName": "歌词纯享模式",
+    "uiName": "[美化] 歌词纯享模式",
     "version": "releases"
   },{
     "id": "ncm",
     "name": "PYLXU/neteaseSupport",
-    "uiName": "NCM扩展（第三方修复）",
+    "uiName": "[音源] 网易云扩展（第三方修复）",
+    "version": "releases"
+  },{
+    "id": "bilibili",
+    "name": "PYLXU/SMEx_BiliSupport",
+    "uiName": "[音源] B站扩展",
     "version": "releases"
   },{
     "id": "neteaseRecommend",
     "name": "PYLXU/neteaseRecommend",
-    "uiName": "NCM扩展 - 音乐推荐模块",
+    "uiName": "[门户] 网易云推荐 (依赖于网易云音源扩展)",
     "version": "releases"
   },{
     "id": "ncm",
     "name": "Simsv-Software/SimMusic-NCM-Ext",
-    "uiName": "NCM扩展（官方）",
+    "uiName": "[音源] 网易云扩展",
     "version": "package.json"
   }
 ]
