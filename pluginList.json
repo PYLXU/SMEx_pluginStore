@@ -2,13 +2,13 @@
   {
     "id": "pluginStore",
     "name": "PYLXU/SMEx_pluginStore",
-    "uiName": "[通知] 插件提交 (Pull Request方式到PYLXU/SMEx_pluginStore)",
+    "uiName": "[通知] 扩展提交 (Pull Request方式到PYLXU/SMEx_pluginStore)",
     "version": "releases"
   },
   {
     "id": "pluginStore",
     "name": "PYLXU/SMEx_pluginStore",
-    "uiName": "[功能] 插件商店",
+    "uiName": "[功能] 扩展商店",
     "version": "releases"
   },{
     "id": "recognition",
