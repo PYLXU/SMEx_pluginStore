@@ -4,21 +4,10 @@
     "name": "PYLXU/SMEx_pluginStore",
     "uiName": "[通知] 扩展提交 (Pull Request方式到PYLXU/SMEx_pluginStore)",
     "version": "releases"
-  },
-  {
-    "id": "pluginStore",
-    "name": "PYLXU/SMEx_pluginStore",
-    "uiName": "[功能] 扩展商店",
-    "version": "releases"
   },{
     "id": "recognition",
     "name": "Simsv-Software/SimMusic-Recognition-Ext",
     "uiName": "[功能] 听歌识曲",
-    "version": "releases"
-  },{
-    "id": "RisBugFix",
-    "name": "PYLXU/SMEx_RisBugFix",
-    "uiName": "[补丁] 修复文件名#符号的支持",
     "version": "releases"
   },{
     "id": "lyricsMode",
@@ -41,9 +30,19 @@
     "uiName": "[门户] 网易云推荐 (依赖于网易云音源扩展)",
     "version": "releases"
   },{
+    "id": "RisBugFix",
+    "name": "PYLXU/SMEx_RisBugFix",
+    "uiName": "[补丁] 修复文件名#符号的支持",
+    "version": "releases"
+  },{
     "id": "ncm",
     "name": "Simsv-Software/SimMusic-NCM-Ext",
     "uiName": "[音源] 网易云扩展",
     "version": "package.json"
+  },{
+    "id": "pluginStore",
+    "name": "PYLXU/SMEx_pluginStore",
+    "uiName": "[功能] 扩展商店",
+    "version": "releases"
   }
 ]
