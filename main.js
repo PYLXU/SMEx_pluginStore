@@ -41,15 +41,48 @@ ExtensionFunctions.insertStyle(`
     #extensionShopPage #extensionShopContainer button {
         white-space: nowrap;
     }
-    `);
+    #extensionShopPage #extensionShopHeader {
+        display: flex;
+        align-items: center;
+    }
+    #extensionShopPage #extensionSearchForm {
+        font-size: medium;
+        max-width: 230px;
+        margin-left: auto;
+        margin-top: 6px;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    #extensionShopPage #extensionSearchInput {
+        font-size: 12px;
+        margin: 0;
+        padding: 5px;
+    }
+    #extensionShopPage #extensionSearchButton {
+        width: 32px;
+        height: 26px;
+        padding: 0px;
+        font-size: 16px;
+        padding-left: 5px;
+    }
+`);
 extensionShopPage.pageDiv.classList.add("page");
-extensionShopPage.pageDiv.innerHTML = `<div class="header">
+extensionShopPage.pageDiv.innerHTML = `<div class="header" id="extensionShopHeader">
     <i></i> 扩展商店
+    <form class="inputGroup" id="extensionSearchForm">
+        <input id="extensionSearchInput" placeholder="搜索扩展" spellcheck="false">
+        <button id="extensionSearchButton"><i></i></button>
+    </form>
 </div>
-<div id="extensionShopContainer">列表加载中...</div>`
+<div>
+<div id="extensionShopContainer">列表加载中...</div>`;
+
 extensionShopPage.navbarDiv.addEventListener("click", (event) => {
     loadStoreData();
 });
+
 async function downloadAndInstallPlugin(url, buttonElement) {
     const tempDir = require('os').tmpdir();
     const filename = url.substring(url.lastIndexOf('/') + 1);
@@ -144,7 +177,26 @@ function insertAfter(newElement, targetElement) {
 
 async function loadStoreData() {
     const extensionContainer = document.getElementById("extensionShopContainer");
-    extensionContainer.innerHTML = "";
+    extensionContainer.innerHTML = `<div style="gap: 10px;">
+    <span>扩展分类</span>
+    <button class="extensionCategoryButton" data-category=" ">全部</button>
+	<button class="extensionCategoryButton sub" data-category="音源">音源</button>
+	<button class="extensionCategoryButton sub" data-category="门户">门户</button>
+	<button class="extensionCategoryButton sub" data-category="功能">功能</button>
+	<button class="extensionCategoryButton sub" data-category="美化">美化</button>
+	<button class="extensionCategoryButton sub" data-category="补丁">补丁</button>
+	</div>`;
+    document.querySelectorAll(".extensionCategoryButton").forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const category = event.target.getAttribute("data-category");
+            search("[" + category + "]");
+
+            document.querySelectorAll(".extensionCategoryButton").forEach((btn) => {
+                btn.classList.add("sub");
+            });
+            event.target.classList.remove("sub");
+        });
+    });
     try {
         const plugins = await fetchPluginList();
         for (const plugin of plugins) {
@@ -183,6 +235,7 @@ async function loadStoreData() {
                     </section>
                     <button class="sub installButton" data-package-name="${packageName}" data-repo-name="${repoName}" data-tag-name="${release.tag_name}" ${buttonDisabled ? 'disabled' : ''}>${buttonText}</button>
                 `;
+                onlinePluginList.className = "onlineEtensionCard";
 
                 extensionContainer.appendChild(onlinePluginList);
                 onlinePluginList.querySelector(`.installButton`).addEventListener('click', async (event) => {
@@ -224,4 +277,22 @@ async function loadStoreData() {
         extensionContainer.appendChild(errorDisplay);
     }
 
+}
+
+document.getElementById("extensionSearchForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    search(document.getElementById("extensionSearchInput").value);
+});
+
+function search(keyword) {
+    const extensionContainer = document.getElementById("extensionShopContainer");
+    const cards = extensionContainer.querySelectorAll('.onlineEtensionCard');
+    cards.forEach(card => {
+        const textContent = card.textContent || card.innerText;
+        if (textContent.toLowerCase().includes(keyword.toLowerCase())) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
 }
