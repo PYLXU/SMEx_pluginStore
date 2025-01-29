@@ -4,7 +4,8 @@
 
 ## 扩展截图
 
-![image](https://github.com/user-attachments/assets/57e61788-341b-4b38-b817-926b2c1cbc62)
+![{A4AAD221-71A7-408D-AA3B-417EFDBA39C4}](https://github.com/user-attachments/assets/25331c38-9e64-460e-9374-ac628c5bba75)
+
 
 ## 安装教程
 
