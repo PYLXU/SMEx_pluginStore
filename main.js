@@ -179,17 +179,17 @@ async function loadStoreData() {
     const extensionContainer = document.getElementById("extensionShopContainer");
     extensionContainer.innerHTML = `<div style="gap: 10px;">
     <span>扩展分类</span>
-    <button class="extensionCategoryButton" data-category="扩展">全部</button>
-	<button class="extensionCategoryButton sub" data-category="音源">音源</button>
-	<button class="extensionCategoryButton sub" data-category="门户">门户</button>
-	<button class="extensionCategoryButton sub" data-category="功能">功能</button>
-	<button class="extensionCategoryButton sub" data-category="美化">美化</button>
-	<button class="extensionCategoryButton sub" data-category="补丁">补丁</button>
+    <button class="extensionCategoryButton" data-category="">全部</button>
+	<button class="extensionCategoryButton sub" data-category="[音源]">音源</button>
+	<button class="extensionCategoryButton sub" data-category="[门户]">门户</button>
+	<button class="extensionCategoryButton sub" data-category="[功能]">功能</button>
+	<button class="extensionCategoryButton sub" data-category="[美化]">美化</button>
+	<button class="extensionCategoryButton sub" data-category="[补丁]">补丁</button>
 	</div>`;
     document.querySelectorAll(".extensionCategoryButton").forEach((button) => {
         button.addEventListener("click", (event) => {
             const category = event.target.getAttribute("data-category");
-            search("[" + category + "]");
+            search(category);
 
             document.querySelectorAll(".extensionCategoryButton").forEach((btn) => {
                 btn.classList.add("sub");
