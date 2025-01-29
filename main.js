@@ -203,7 +203,6 @@ async function loadStoreData() {
             const repoName = plugin.name;
             try {
                 const release = await fetchLatestRelease(repoName);
-
                 const owner = repoName.split('/')[0];
                 const packageName = plugin.id;
                 const version = plugin.version == "releases" ? release.tag_name : (await fetchPackageJson(repoName, release.tag_name)).version;
@@ -226,15 +225,15 @@ async function loadStoreData() {
                 }
 
                 onlinePluginList.innerHTML += `
-                    <section>
-                        <div>${plugin.uiName}<small> - ${owner}</small></div>
-                        <span>
-                            <i>&#xEE59;</i> 扩展包名: ${packageName}<br>
-                            <i>&#xEE51;</i> 扩展版本: ${version}<br>
-                        </span>
-                    </section>
-                    <button class="sub installButton" data-package-name="${packageName}" data-repo-name="${repoName}" data-tag-name="${release.tag_name}" ${buttonDisabled ? 'disabled' : ''}>${buttonText}</button>
-                `;
+                <section>
+                <div>${plugin.uiName}<small> - ${owner}</small></div>
+                <span>
+                    <i>&#xEE59;</i> 扩展包名: ${packageName}<br>
+                    <i>&#xEE51;</i> 扩展版本: ${version}<br>
+                </span>
+                </section>
+                <button class="sub installButton" data-package-name="${packageName}" data-repo-name="${repoName}" data-tag-name="${release.tag_name}" ${buttonDisabled ? 'disabled' : ''}>${buttonText}</button>
+            `;
                 onlinePluginList.className = "onlineEtensionCard";
 
                 extensionContainer.appendChild(onlinePluginList);
@@ -245,21 +244,39 @@ async function loadStoreData() {
                     const packageName = button.getAttribute('data-package-name');
                     button.disabled = true;
                     button.textContent = '安装中...';
-                    downloadAndInstallPlugin(`https://mirror.ghproxy.com/https://github.com/${repoName}/releases/download/${tagName}/extension.zip`, button);
+                    downloadAndInstallPlugin(`https://mirror.ghproxy.com/https://github.com/${repoName}/releases/latest/download/extension.zip`, button);
                 });
 
             } catch (error) {
-                const errorDisplay = document.createElement('div');
-                errorDisplay.innerHTML += `
-                    <section>
-                        <div>载入这个插件时出现了错误</div>
-                        <span>
-                            <i>&#xEB97;</i> 错误详情: ${error}<br>
-                        </span>
-                    </section>
-                    <button class="sub" disabled>安装</button>
+                const onlinePluginList = document.createElement('div');
+                const owner = repoName.split('/')[0];
+                const packageName = plugin.id;
+                const version = "请求失败,请稍后再试";
+                let buttonText = '重装';
+                let buttonDisabled = false;
+
+                onlinePluginList.innerHTML += `
+                <section>
+                <div>${plugin.uiName}<small> - ${owner}</small></div>
+                <span>
+                    <i>&#xEE59;</i> 扩展包名: ${packageName}<br>
+                    <i>&#xEE51;</i> 扩展版本: ${version}<br>
+                </span>
+                </section>
+                <button class="sub installButton" data-package-name="${packageName}" data-repo-name="${repoName}" data-tag-name="latest" ${buttonDisabled ? 'disabled' : ''}>${buttonText}</button>
             `;
-                extensionContainer.appendChild(errorDisplay);
+                onlinePluginList.className = "onlineEtensionCard";
+
+                extensionContainer.appendChild(onlinePluginList);
+                onlinePluginList.querySelector(`.installButton`).addEventListener('click', async (event) => {
+                    const button = event.target;
+                    const repoName = button.getAttribute('data-repo-name');
+                    const tagName = button.getAttribute('data-tag-name');
+                    const packageName = button.getAttribute('data-package-name');
+                    button.disabled = true;
+                    button.textContent = '安装中...';
+                    downloadAndInstallPlugin(`https://mirror.ghproxy.com/https://github.com/${repoName}/releases/latest/download/extension.zip`, button);
+                });
             }
         }
 
