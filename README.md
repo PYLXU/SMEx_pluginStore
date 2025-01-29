@@ -17,8 +17,9 @@
 
 1. 本扩展使用了[RisProxies](https://proxies.3r60.top/)和[GHProxy](https://mirror.ghproxy.com/)作为加速站点
 2. 若扩展存在Bug请及时[提交](https://github.com/PYLXU/SMEx_pluginStore/issues)，非常感谢
-3. 请求次数过多会导致短时间内无法继续使用，这是GithubApi的问题，感谢理解
+3. 请求次数过多会导致短时间内版本无法正常获取
 4. 本扩展非官方商店
+5. 您可以提交issues或pull request来提交您的扩展
 
 ## 特别鸣谢
 
