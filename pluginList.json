@@ -2,6 +2,11 @@
   {
     "id": "pluginStore",
     "name": "PYLXU/SMEx_pluginStore",
+    "uiName": "[通知] 因代理失效，请正在使用1.3以及更早版本的用户手动更新到1.5版本",
+    "version": "releases"
+  },{
+    "id": "pluginStore",
+    "name": "PYLXU/SMEx_pluginStore",
     "uiName": "[通知] 扩展提交 (Pull Request方式到PYLXU/SMEx_pluginStore)",
     "version": "releases"
   },{
