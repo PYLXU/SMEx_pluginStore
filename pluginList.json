@@ -5,7 +5,7 @@
     "uiName": "[通知] 扩展提交 (Pull Request方式到PYLXU/SMEx_pluginStore)",
     "version": "releases"
   },{
-    "id": "lyricsMode",
+    "id": "darkMode",
     "name": "PYLXU/SMEx_darkMode",
     "uiName": "[美化] 主界面深色模式",
     "version": "releases"
