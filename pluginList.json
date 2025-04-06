@@ -5,7 +5,7 @@
     "uiName": "[通知] 扩展提交 (Pull Request方式到PYLXU/SMEx_pluginStore)",
     "version": "releases"
   },{
-    "id": "playerPage",
+    "id": "playerMode",
     "name": "PYLXU/SMEx_playerPage",
     "uiName": "[美化] 播放页面",
     "version": "releases"
