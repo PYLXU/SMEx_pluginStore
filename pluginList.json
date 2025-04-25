@@ -25,11 +25,6 @@
     "uiName": "[功能] 听歌识曲",
     "version": "releases"
   },{
-    "id": "lyricsMode",
-    "name": "PYLXU/SMEx_lyricsMode",
-    "uiName": "[美化] 歌词纯享模式（与 ⌈ 播放页面 ⌋ 暂时不兼容）",
-    "version": "releases"
-  },{
     "id": "ncm",
     "name": "PYLXU/neteaseSupport",
     "uiName": "[音源] 网易云扩展（第三方修复）",
@@ -58,6 +53,11 @@
     "id": "pluginStore",
     "name": "PYLXU/SMEx_pluginStore",
     "uiName": "[功能] 扩展商店",
+    "version": "releases"
+  },{
+    "id": "lyricsMode",
+    "name": "PYLXU/SMEx_playerPage",
+    "uiName": "[美化] 歌词纯享模式（已合并至 ⌈ 播放页面 ⌋ ）",
     "version": "releases"
   }
 ]
