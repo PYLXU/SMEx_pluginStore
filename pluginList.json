@@ -15,6 +15,11 @@
     "uiName": "[美化] 主界面深色模式",
     "version": "releases"
   },{
+    "id": "kuwo",
+    "name": "PYLXU/SMEx_KuwoSupport",
+    "uiName": "[音源] 酷我音乐",
+    "version": "releases"
+  },{
     "id": "lyricsIsland",
     "name": "PYLXU/SMEx_LyricsIsland",
     "uiName": "[功能] 歌词岛（搭配Ci/Cw使用）",
