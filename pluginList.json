@@ -5,6 +5,11 @@
     "uiName": "[通知] 扩展提交 (Pull Request方式到PYLXU/SMEx_pluginStore)",
     "version": "releases"
   },{
+    "id": "amll-connecter",
+    "name": "PYLXU/SMEx_AmllConnector",
+    "uiName": "[功能] AMLL 连接器",
+    "version": "releases"
+  },{
     "id": "playerPage",
     "name": "PYLXU/SMEx_playerPage",
     "uiName": "[美化] 播放页面",
