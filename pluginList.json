@@ -20,6 +20,11 @@
     "uiName": "[音源] QQ音乐",
     "version": "releases"
   },{
+    "id": "kuwo",
+    "name": "PYLXU/SMEx_KuwoSupport",
+    "uiName": "[音源] 酷我音乐",
+    "version": "releases"
+  },{
     "id": "darkMode",
     "name": "PYLXU/SMEx_darkMode",
     "uiName": "[美化] 主界面深色模式",
